@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My First Web Page</title>
-    <script src="https://unpkg.com/petite-vue" defer init></script>
+    <title>Dhruv Singh </title>
+    <!-- <script src="https://unpkg.com/petite-vue" defer init></script> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
 
   </head>
   <body>
-    <h1>Welcome to my first web page!</h1>
-    <p>This is a paragraph of text.</p>
-    <p>This is another paragraph of text.</p>
-  </body>
+    <!-- <div v-scope="count:0">
+      <h1 class="text-4xl font-bold text-center">Count: {{count}}</h1>
+      <button class="bg-blue-300 rounded shadow" @click="count++">Increment</button>
+      <button class="bg-red-300 rounded shadow" @click="count--">Decrement</button>
+    </div> -->
+    <div id = "exmaple">
+      <h1 class="text-4xl font-bold text-center">Count: {{count}}</h1>
+      <button class="bg-blue-300 rounded shadow" @click="increment">Increment</button>
+      <button class="bg-red-300 rounded shadow" @click="count--">Decrement</button>
+
+    </div>
+    <script type ="module">
+      import { createApp } from 'https://unpkg.com/petite-vue?module'
+      createApp({
+        count: 0,
+        increment() {
+          this.count++
+        },
+      }).mount("#exmaple")  
+
+    </script>
+    </body>
